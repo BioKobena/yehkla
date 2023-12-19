@@ -83,6 +83,13 @@ code {
   font-family: 'Poppins';
 }
 
+.cardTitle::after{
+  content:"";
+  background-color: blue;
+  position: relative;
+  top: 2rem;
+  right: 5rem;
+}
 .cardTitle::before{
   content:"";
   background-color: blue;

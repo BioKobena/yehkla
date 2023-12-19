@@ -8,6 +8,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { motion } from "framer-motion";
+
 
 const Home = () => {
 
@@ -26,12 +28,23 @@ const Home = () => {
         color: "#f9690e",
         fontWeight: "bold",
     }
+
+    const handleCopy = (val) => {
+        const copyValue = val.currentTarget.textContent;
+        console.log(val.currentTarget.textContent)
+        alert(`${copyValue}`)
+    }
     return (
         <>
             <Helmet>
                 <title>Yekkhla | Accueil</title>
             </Helmet>
-            <div style={homeStyle} className='homePage'>
+            <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                exit={{x: window.innerWidth, transition:{duration:0.1}}}
+                style={homeStyle}
+                className='homePage'>
                 <section className='firstPart'>
                     <div className='rightSide'>
                         <Player
@@ -62,10 +75,10 @@ const Home = () => {
                 </section>
                 <section className='secondPart'>
                     <div>
-                        <h1 className='cardTitle'>Nous apprendrons</h1>
+                        <h1 className='cardTitle' onCopy={(val) => handleCopy(val)} >Nous apprendrons</h1>
                     </div>
                     <div className='cardContainer'>
-                        <Card sx={{ maxWidth: 370 }}>
+                        <Card sx={{ maxWidth: 350 }}>
                             <CardMedia
                                 sx={{ height: 140 }}
                                 image="https://img.freepik.com/photos-gratuite/conferencier-africain-coach-affaires-confiant-donnant-presentation-equipe_1163-4620.jpg?size=626&ext=jpg&ga=GA1.2.1998763568.1698434096&semt=ais"
@@ -81,12 +94,12 @@ const Home = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small">Share</Button>
+                                <Button variant='contained' size="small">Share</Button>
                                 <Button size="small">Voir plus</Button>
                             </CardActions>
                         </Card>
 
-                        <Card sx={{ maxWidth: 370 }}>
+                        <Card sx={{ maxWidth: 350 }}>
                             <CardMedia
                                 sx={{ height: 140 }}
                                 image="https://img.freepik.com/photos-gratuite/conferencier-africain-coach-affaires-confiant-donnant-presentation-equipe_1163-4620.jpg?size=626&ext=jpg&ga=GA1.2.1998763568.1698434096&semt=ais"
@@ -102,12 +115,12 @@ const Home = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small">Share</Button>
+                                <Button variant='contained' size="small">Share</Button>
                                 <Button size="small">Voir plus</Button>
                             </CardActions>
                         </Card>
 
-                        <Card sx={{ maxWidth: 370 }}>
+                        <Card sx={{ maxWidth: 350 }}>
                             <CardMedia
                                 sx={{ height: 140 }}
                                 image="https://img.freepik.com/photos-gratuite/conferencier-africain-coach-affaires-confiant-donnant-presentation-equipe_1163-4620.jpg?size=626&ext=jpg&ga=GA1.2.1998763568.1698434096&semt=ais"
@@ -123,13 +136,17 @@ const Home = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small">Share</Button>
+                                <Button variant='contained' size="small">Share</Button>
                                 <Button size="small">Voir plus</Button>
                             </CardActions>
                         </Card>
-                        </div>
+                    </div>
                 </section>
-            </div>
+
+                <section className='thirdPart'>
+
+                </section>
+            </motion.div>
         </>
     )
 }
