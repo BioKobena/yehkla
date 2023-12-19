@@ -1,16 +1,33 @@
-.active{
-    background-color: #1d4ed8;
+*{
+    font-family: 'Poppins', sans-serif;
 }
+.active{
+    /* background-color: rgb(249, 180, 45);; */
+    background-color:#172554;
+    font-weight: bold;
+}
+.registration{
+    background:purple;
+    border-radius: 0.4rem;
+}
+
+nav ul li a:not(.active):hover:nth-child(5){
+    background-color:purple;
+}
+
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
+    background-color:rgb(249, 180, 45);
     /* background-color: #0f172a; */
-    background-color:#262626;
+    /* background-color:rgb(243, 240, 248);; */
     color: white;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 nav .title {
@@ -23,6 +40,7 @@ nav .title {
 
 nav ul {
     display: flex;
+    margin-right: 5rem;
 }
 
 nav ul li {
@@ -33,7 +51,7 @@ nav ul li a {
     display: block;
     text-decoration: none;
     color: white;
-    padding: 0.5rem;
+    padding: 0.7rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
 }
@@ -41,6 +59,7 @@ nav ul li a {
 nav ul li a:not(.active):hover {
     background-color:#172554 ;
 }
+
 
 nav .menu {
     display: none;
@@ -54,13 +73,19 @@ nav .menu {
 }
 
 nav .menu span {
-    height: 0.4rem;
+    height: 0.19rem;
     width: 100%;
     background-color: #fff;
     border-radius: 0.2rem;
 }
 
-
+.item-container{
+    margin-right: 5rem;
+}
+.nav-item{
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
 @media (max-width: 480px) {
     nav .menu {
         display: flex;

@@ -20,18 +20,21 @@ const NavBar = () => {
           <span></span>
           <span></span>
         </div>
-        <ul className={menuOpen ? "open" : ""}>
-          <li>
+        <ul class="item-container" className={menuOpen ? "open" : ""}>
+          <li className="nav-item">
             <NavLink to="/home">Accueil</NavLink>
           </li>
-          <li>
+          <li className="nav-item">
             <NavLink to="/about">À propos</NavLink>
           </li>
-          <li>
-            <NavLink to="/services">Nos Services</NavLink>
+          <li className="nav-item">
+            <NavLink to="/service">Nos Services</NavLink>
           </li>
-          <li>
-            <NavLink to="/contact">Contact</NavLink>
+          <li className="nav-item">
+            <NavLink to="/contact">Contacts</NavLink>
+          </li>
+          <li className="nav-item registration">
+            <NavLink to="/login">S'inscrire</NavLink>
           </li>
         </ul>
       </nav>
