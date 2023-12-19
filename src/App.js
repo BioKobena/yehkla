@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+// import Router from './routes';
+import Home from './components/pages/Home';
+import Products from './components/pages/Products';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import Page404 from './components/pages/Page404';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HelmetProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route index path="home" element={<Home />} />
+          <Route index path="about" element={<About />} />
+          <Route index path="service" element={<Products />} />
+          <Route index path="contact" element={<Contact />} />
+          <Route index path="*" element={<Page404 />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
