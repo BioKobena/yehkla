@@ -5,9 +5,88 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #fefefe; */
+
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat Alternates', sans-serif; */
+}
+
+html {
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.homePage {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  gap: 5rem;
+  padding: 1rem;
+}
+
+.homeTitle {
+  color: rgb(4, 59, 92);
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 7rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.firstPart {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.phraseHome:first-of-type {
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  margin-top: 3rem;
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.phraseHome:nth-of-type(2) {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.yekla-name {
+  font-size: 2rem;
+  /* margin-top: 20rem; */
+}
+
+.secondPart {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  /* align-items: center; */
+  gap: 3rem;
+}
+
+.cardContainer{
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+
+}
+
+.cardTitle{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Poppins';
+}
+
+.cardTitle::before{
+  content:"";
+  background-color: blue;
+  position: relative;
+  top: 2rem;
+  right: 5rem;
 }

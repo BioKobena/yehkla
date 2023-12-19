@@ -8,7 +8,9 @@ const About = () => {
                 <title>Yekkhla | À propos</title>
             </Helmet>
             <div>
-
+              <p>
+                Tout savoir sur Yehkla
+              </p>
             </div>
         </>
     )
