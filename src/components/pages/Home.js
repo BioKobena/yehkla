@@ -42,7 +42,7 @@ const Home = () => {
             <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
-                exit={{x: window.innerWidth, transition:{duration:0.1}}}
+                exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
                 style={homeStyle}
                 className='homePage'>
                 <section className='firstPart'>
@@ -67,8 +67,9 @@ const Home = () => {
                             Exprimez vous et maîtriser l'<span style={{ color: "#f9b42d", fontWeight: "bold", textTransform: "uppercase" }}>Anglais</span>
                         </h3>
                         <Button
-                            variant="contained"
-                            style={{ width: 250, height: 50, alignContent: "center", fontSize: 25, position: "absolute", bottom: 80, fontFamily: "Montserrat" }}
+                            variant="contained" 
+                            color="secondary"
+                            style={{ width: 250, height: 50, alignContent: "center", fontSize: 20, position: "absolute", bottom: 80, fontFamily: "Montserrat" }}
                         >Commencer
                         </Button>
                     </div>
@@ -94,7 +95,7 @@ const Home = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button variant='contained' size="small">Share</Button>
+                                {/* <Button variant='contained' size="small">Share</Button> */}
                                 <Button size="small">Voir plus</Button>
                             </CardActions>
                         </Card>
@@ -115,7 +116,7 @@ const Home = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button variant='contained' size="small">Share</Button>
+                                {/* <Button variant='contained' size="small">Share</Button> */}
                                 <Button size="small">Voir plus</Button>
                             </CardActions>
                         </Card>
@@ -136,15 +137,39 @@ const Home = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button variant='contained' size="small">Share</Button>
+                                {/* <Button variant='contained' size="small">Share</Button> */}
                                 <Button size="small">Voir plus</Button>
                             </CardActions>
                         </Card>
                     </div>
                 </section>
-
                 <section className='thirdPart'>
-
+                    <div style={{width:"60%"}}>
+                        <img className='imageTraining' style={{width:"90%"}} src="https://img.freepik.com/photos-gratuite/coup-moyen-smiley-femme-enseignant_23-2149272226.jpg?size=626&ext=jpg&uid=R73497735&ga=GA1.2.1998763568.1698434096&semt=ais" alt="Professeur" />
+                    </div>
+                    <div style={{width:"40%"}}>
+                            <h1>Depuis votre domicile</h1>
+                            <p>
+                            Rencontre entre les apprenants pour les cours en présentiels. Avec les experts et les débutants pour confronter vos compétence.s
+                            Rencontre entre les apprenants pour les cours en présentiels. Avec les experts et les débutants pour confronter vos compétence.s
+                            Rencontre entre les apprenants pour les cours en présentiels. Avec les experts et les débutants pour confronter vos compétence.s
+                            Rencontre entre les apprenants pour les cours en présentiels. Avec les experts et les débutants pour confronter vos compétence.s
+                            </p>
+                    </div>
+                </section>
+                <section className='fourthPart'>
+                    <div style={{width:"40%"}}>
+                            <h1>Depuis votre domicile</h1>
+                            <p>
+                            Rencontre entre les apprenants pour les cours en présentiels. Avec les experts et les débutants pour confronter vos compétence.s
+                            Rencontre entre les apprenants pour les cours en présentiels. Avec les experts et les débutants pour confronter vos compétence.s
+                            Rencontre entre les apprenants pour les cours en présentiels. Avec les experts et les débutants pour confronter vos compétence.s
+                            Rencontre entre les apprenants pour les cours en présentiels. Avec les experts et les débutants pour confronter vos compétence.s
+                            </p>
+                    </div>
+                    <div style={{width:"60%"}}>
+                        <img className='imageTraining' style={{width:"90%"}} src="https://img.freepik.com/photos-gratuite/femme-enseignant-aux-enfants-classe_23-2148892551.jpg?size=626&ext=jpg&uid=R73497735&ga=GA1.1.1998763568.1698434096&semt=ais" alt="Professeur" />
+                    </div>
                 </section>
             </motion.div>
         </>
